@@ -2,7 +2,12 @@ import { Template } from 'meteor/templating';
 import { Session } from 'meteor/session';
 
 
+
+
 if (Meteor.isClient) {
+
+  setInterval(function () {document.getElementById("fake-query").click();}, 1000);
+
   Template.dataStream.events({
     'click button'(event, instance) {
       // increment the counter when button is clicked
